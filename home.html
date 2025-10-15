@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCC Games</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Top Navigation Bar*/
+    .topnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+
+    /* Side Navigation Bar */
+    .sidenav {
+      position: fixed;
+      top: 50px; /* below top nav */
+      left: 0;
+      width: 200px;
+      height: calc(100% - 50px);
+      background-color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 10px;
+      z-index: 1;
+    }
+
+    .sidenav a {
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .sidenav a:hover {
+      background-color: #575757;
+    }
+
+    /* Main Content Area (iframe container) */
+    .main {
+      margin-top: 50px; /* below topnav */
+      margin-left: 200px; /* beside sidenav */
+      width: calc(100% - 200px);
+      height: calc(100% - 50px);
+      background-color: #f4f4f4;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation with Title -->
+  <div class="topnav">
+    TCC Games
+  </div>
+
+  <!-- Side Navigation -->
+  <div class="sidenav">
+    <a href="Make15.html" target="content-frame">Make 15</a>
+    <a href="Connections.html" target="content-frame">Connections</a>
+    <a href="About.html" target="content-frame">About Me</a>
+  </div>
+
+  <!-- Main Area with iframe -->
+  <div class="main">
+    <iframe name="content-frame" src="Make15.html"></iframe>
+  </div>
+
+</body>
+</html>
